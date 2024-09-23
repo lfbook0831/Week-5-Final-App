@@ -1,4 +1,6 @@
 import Head from 'next/head';
+import path from 'path';
+import fs from 'fs';
 
 export default function Home({ people }) {
   return (
@@ -28,8 +30,9 @@ export default function Home({ people }) {
 }
 
 export async function getStaticProps() {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_VERCEL_URL ? '' : 'http://localhost:3000'}/data/data.json`);
-  const people = await res.json();
+  const filePath = path.join(process.cwd(), 'public/data/data.json');
+  const data = fs.readFileSync(filePath, 'utf8');
+  const people = JSON.parse(data);
   return {
     props: {
       people,
