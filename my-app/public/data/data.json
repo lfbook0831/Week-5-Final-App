@@ -1,19 +1,14 @@
 [
-    {
-      "name": "My husband",
-      "date": "Sept 27"
-    },
-    {
-      "name": "My dad",
-      "date": "Sept 6"
-    },
-    {
-      "name": "Myself",
-      "date": "Sept 24"
-    },
-    {
-      "name": "My sis in law",
-      "date": "Sept 21"
-    }
-  ]
-  
+  {
+    "name": "My husband"
+  },
+  {
+    "name": "My Dad"
+  },
+  {
+    "name": "Myself"
+  },
+  {
+    "name": "My sis in law"
+  }
+]
