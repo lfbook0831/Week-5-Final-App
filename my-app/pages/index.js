@@ -28,7 +28,7 @@ export default function Home({ people }) {
 }
 
 export async function getStaticProps() {
-  const res = await fetch(`${process.env.NODE_ENV === 'development' ? 'http://localhost:3000' : ''}/data/data.json`);
+  const res = await fetch(`${process.env.NEXT_PUBLIC_VERCEL_URL ? '' : 'http://localhost:3000'}/data/data.json`);
   const people = await res.json();
   return {
     props: {
